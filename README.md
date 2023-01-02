@@ -1,4 +1,6 @@
 # one-time-pad-gen
+One time pad generator written in C.
+
 
 ```
 $ otpg 10
