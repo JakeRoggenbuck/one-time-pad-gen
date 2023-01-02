@@ -1,7 +1,7 @@
 # one-time-pad-gen
 
 ```
-one-time-pad-gen (main) λ ./cmake/otpg 10
+$ one-time-pad-gen (main) λ ./cmake/otpg 10
 ```
 
 ```
