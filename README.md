@@ -1,7 +1,7 @@
 # one-time-pad-gen
 
 ```
-$ ./cmake/otpg 10
+$ otpg 10
 ```
 
 ```
