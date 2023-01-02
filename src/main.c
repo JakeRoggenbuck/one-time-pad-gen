@@ -25,7 +25,6 @@ void warn(char *msg) {
 }
 
 void generate(int rows) {
-
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < COLS; ++j) {
             for (int k = 0; k < WORDS; ++k) {
@@ -38,20 +37,32 @@ void generate(int rows) {
     }
 }
 
+int get_seed() {
+	int val;
+	FILE *fp;
+
+	fp = fopen("/dev/urandom", "rb");
+	fread(&val, sizeof(int), 1, fp);
+	fclose(fp);
+
+	return val;
+}
+
 int main(int argc, char *argv[]) {
-    if (argc < 2) {
-        error("Too few arguments.\n");
-    }
+	if (argc < 2) {
+		error("Too few arguments.\n");
+	}
 
-    if (argc > 2) {
-        error("Too many arguments.\n");
-    }
+	if (argc > 2) {
+		error("Too many arguments.\n");
+	}
 
-    int rows = atoi(argv[1]);
+	int rows = atoi(argv[1]);
 
-    srand(time(NULL));
+	int seed = get_seed();
+	srand(time(NULL) * seed);
 
-    generate(rows);
+	generate(rows);
 
-    return 0;
+	return 0;
 }
