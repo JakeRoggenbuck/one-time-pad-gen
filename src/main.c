@@ -1,13 +1,13 @@
 #include "termcolor.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <string.h>
+#include <time.h>
 
 #define WORDS 5
 #define COLS 5
 
-void help() { printf("Usage: otpg [rows]\n\n"); }
+void help() { printf("Usage: otpg [rows] [--ref]\n\n"); }
 
 void panic() {
     help();
