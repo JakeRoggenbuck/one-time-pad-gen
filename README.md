@@ -1,5 +1,5 @@
 # one-time-pad-gen
-One time pad generator written in C.
+One time pad generator written in C. Generate one time pads for use in simple manual ciphers.
 
 
 ```
