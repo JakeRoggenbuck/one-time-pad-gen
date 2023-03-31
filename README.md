@@ -1,6 +1,5 @@
 # one-time-pad-gen
-One time pad generator written in C. Generate one time pads for use in simple manual ciphers.
-
+Generate one time pads for use in simple manual ciphers written in C.
 
 ```
 $ otpg 10
